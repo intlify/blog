@@ -1,0 +1,14 @@
+@tailwind base;
+
+html {
+  @apply font-intlify;
+}
+
+body {
+  @apply bg-white dark:bg-gray-900
+    transition-colors duration-200 ease-in
+    transition-colors duration-200 ease-in;
+}
+
+@tailwind components;
+@tailwind utilities;
