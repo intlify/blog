@@ -20,7 +20,7 @@ const head = [
     'meta',
     {
       name: 'twitter:image',
-      content: 'https://blog.intlify.dev/images/ogimage.png'
+      content: 'https://blog.intlify.dev/ogimage.png'
     }
   ],
   ['meta', { property: 'og:type', content: 'article' }],
@@ -38,7 +38,7 @@ const head = [
     'meta',
     {
       property: 'og:image',
-      content: 'https://blog.intlify.dev/images/ogimage.png'
+      content: 'https://blog.intlify.dev/ogimage.png'
     }
   ],
   [
