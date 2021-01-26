@@ -6,6 +6,7 @@ exports.getPosts = function getPosts (asFeed = false) {
   const postDir = path.resolve(__dirname, '../posts')
   return fs
     .readdirSync(postDir)
+    .filter(file => file.endsWith('.md'))
     .map(file => {
       const src = fs.readFileSync(path.join(postDir, file), 'utf-8')
       const { data, excerpt } = matter(src, { excerpt: true })

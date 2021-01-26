@@ -10,10 +10,10 @@ const feed = new Feed({
   id: url,
   link: url,
   language: 'en',
-  image: 'https://blog.intlify.dev/images/logo.png',
+  image: `${url}/images/logo.png`,
   favicon: `${url}/favicon.ico`,
   copyright:
-    'Copyright (c) 2021-present, Kazuya (kazupon) Kawaguchi and blog contributors'
+    'Copyright (c) 2021-present, Kazuya Kawaguchi and blog contributors'
 })
 
 getPosts(true).forEach(post => {
