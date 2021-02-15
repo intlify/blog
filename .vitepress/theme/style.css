@@ -19,6 +19,15 @@
   @apply dark:text-white;
 }
 
+.prose a,
+.prose a code {
+  @apply dark:text-white dark:hover:text-gray-500;
+}
+
+.prose strong, code {
+  @apply dark:text-white;
+}
+
 /**
  * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML.
  * Based on https://github.com/chriskempson/tomorrow-theme
