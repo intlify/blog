@@ -15,6 +15,10 @@
   display: none;
 }
 
+.prose p {
+  @apply text-lg;
+}
+
 .prose h2, h3, h4, h5 {
   @apply dark:text-white;
 }
