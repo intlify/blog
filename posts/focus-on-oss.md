@@ -34,11 +34,11 @@ Here's what I'll be working on!
   - Support for nuxt/i18n
   - Support nuxt/i18n compatible APIs library as Vue plugin
 - The language switching framework-agnostic library (for micro-frontend)
-- Improvement vue-i18n-next core library
-  - More framework-agnostic!
-  - More type-safe resource management (schema & single source of truth)
-  - server-side oriented
-  - ICU compatible message format
+- **Improvement vue-i18n-next core library**
+  - **More framework-agnostic!**
+  - **More type-safe resource management (schema & single source of truth)**
+  - **server-side oriented**
+  - **ICU compatible message format**
 
 The above will be developed as OSS in the [Intlify project](https://github.com/intlify) I started.
 
