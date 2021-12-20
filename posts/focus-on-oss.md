@@ -44,7 +44,7 @@ The above will be developed as OSS in the [Intlify project](https://github.com/i
 
 Especially, the refinement of the core library of vue-i18n-next, which I put in bold, is what I want to do the most. I will make it more generic and use it in various use cases. And, I will also contribute to Vue, Nuxt, Vite, and other OSS communities through i18n.
 
-I'm the organizer of Vue.js japan community, so next year in 2022, I’ll be planning to hold Vue Fes Japan 2022.
+I'm an organizer of Vue.js japan community, so next year in 2022, I’ll be planning to hold Vue Fes Japan 2022.
 
 ## Lastly
 
