@@ -19,7 +19,10 @@
   @apply text-lg;
 }
 
-.prose h2, h3, h4, h5 {
+.prose h2,
+h3,
+h4,
+h5 {
   @apply dark:text-white;
 }
 
@@ -28,7 +31,8 @@
   @apply dark:text-white dark:hover:text-gray-500;
 }
 
-.prose strong, code {
+.prose strong,
+code {
   @apply dark:text-white;
 }
 

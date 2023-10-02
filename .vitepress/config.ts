@@ -1,10 +1,9 @@
-// @ts-check
-const { getPosts } = require('./getPosts')
+import { defineConfig } from 'vitepress'
+import { genFeed } from './genFeed.ts'
 
-/**
- * @type {import('vitepress').UserConfig['head']}
- */
-const head = [
+import type { HeadConfig } from 'vitepress'
+
+const head: HeadConfig[] = [
   ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
   ['meta', { name: 'twitter:site', content: '@intlify' }],
   ['meta', { name: 'twitter:url', content: 'https://blog.intlify.dev' }],
@@ -61,14 +60,12 @@ if (process.env.NODE_ENV === 'production') {
   ])
 }
 
-/**
- * @type {import('vitepress').UserConfig}
- */
-module.exports = {
+export default defineConfig({
+  // appearance: 'force-dark',
+  srcExclude: ['**/README.md'],
   title: 'The Intlify World',
   description: 'The offical blog for the Intlify project',
   head,
-  customData: {
-    posts: getPosts()
-  }
-}
+  cleanUrls: true,
+  buildEnd: genFeed
+})

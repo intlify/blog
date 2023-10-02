@@ -1,3 +1,4 @@
 dist
 posts
 public
+.vitepress/cache

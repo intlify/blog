@@ -1,3 +1,36 @@
+<script setup lang="ts">
+import { watch, ref } from 'vue'
+
+const darkMode = ref(false)
+
+watch(darkMode, () => {
+  if (
+    localStorage.getItem('theme') === 'dark' ||
+    (!('theme' in localStorage) &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches)
+  ) {
+    darkMode.value = true
+    const el = document.querySelector('html')
+    el && el.classList.add('dark')
+  } else {
+    darkMode.value = false
+    const el = document.querySelector('html')
+    el && el.classList.remove('dark')
+  }
+})
+
+function onHandleChangeDarkMode() {
+  // eslint-disable-line no-unused-vars
+  if (darkMode.value) {
+    localStorage.setItem('theme', 'light')
+    darkMode.value = false
+  } else {
+    localStorage.setItem('theme', 'dark')
+    darkMode.value = true
+  }
+}
+</script>
+
 <template>
   <div class="flex">
     <div class="mr-2 text-xs">
@@ -16,7 +49,9 @@
         />
       </svg>
     </div>
-    <div class="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in">
+    <div
+      class="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in"
+    >
       <input
         id="toggle"
         type="checkbox"
@@ -24,13 +59,8 @@
         :checked="darkMode"
         class="toggle-checkbox"
         @change="onHandleChangeDarkMode"
-      >
-      <label
-        for="toggle"
-        class="toggle-label"
-      >
-        toggle
-      </label>
+      />
+      <label for="toggle" class="toggle-label"> toggle </label>
     </div>
     <div class="text-xs">
       <svg
@@ -50,34 +80,6 @@
     </div>
   </div>
 </template>
-
-<script setup>
-import { watch, ref } from 'vue'
-
-const darkMode = ref(false)
-
-watch(darkMode, () => {
-  if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    darkMode.value = true
-    const el = document.querySelector('html')
-    el && el.classList.add('dark')
-  } else {
-    darkMode.value = false
-    const el = document.querySelector('html')
-    el && el.classList.remove('dark')
-  }
-})
-
-function onHandleChangeDarkMode () { // eslint-disable-line no-unused-vars
-  if (darkMode.value) {
-    localStorage.setItem('theme', 'light')
-    darkMode.value = false
-  } else {
-    localStorage.setItem('theme', 'dark')
-    darkMode.value = true
-  }
-}
-</script>
 
 <style scoped>
 .toggle-checkbox {
